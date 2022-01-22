@@ -3,22 +3,22 @@ package com.itheima;
 import java.util.Scanner;
 
 public class Instructor extends Person{
-    private int Instructorid;
+    private String Instructorid;
     private Course teachinghead;
 
     public Instructor(){
         new Person();
     }
-    public Instructor(String name,int age,String email,int Instructorid){
+    public Instructor(String name,int age,String email,String Instructorid){
         this.setAge(age);
         this.setName(name);
         this.setEmail(email);
         this.Instructorid=Instructorid;
     }
-    public void setInstructorid(int Instructorid){
+    public void setInstructorid(String Instructorid){
         this.Instructorid=Instructorid;
     }
-    public int getInstructorid(){
+    public String getInstructorid(){
         return Instructorid;
     }
     public Course getCoursehead(){
@@ -47,12 +47,20 @@ public class Instructor extends Person{
             System.out.println("Do you want to continue to enter a course? 1.yes 2. no");
             a = sc.nextInt();
         }
+        System.out.println();
         return;
     }
     public void printTeaching(){
+        System.out.println("---------------------------------------------------");
         System.out.println("The Instructor name is "+this.getName());
+        System.out.println("Age is: "+this.getAge());
+        System.out.println("E-mail is: "+this.getEmail());
+        System.out.println("ID is: "+this.getInstructorid());
+        System.out.println("Course:");
         for(Course i=teachinghead;i!=null;i=i.getNext()){
-            System.out.println(i.getCourse());
+            System.out.println("     "+i.getCourse());
         }
+        System.out.println("---------------------------------------------------");
+        System.out.println();
     }
 }

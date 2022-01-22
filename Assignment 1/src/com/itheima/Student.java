@@ -2,22 +2,22 @@ package com.itheima;
 import java.util.Scanner;
 
 public class Student extends Person{
-    private int studentid;
+    private String studentid;
     private Course coursehead=null;
 
     public Student(){
         new Person();
     }
-    public Student(String name,int age,String email,int studentid){
+    public Student(String name,int age,String email,String studentid){
         this.setAge(age);
         this.setName(name);
         this.setEmail(email);
         this.studentid=studentid;
     }
-    public void setStudentid(int studentid){
+    public void setStudentid(String studentid){
         this.studentid=studentid;
     }
-    public int getStudentid(){
+    public String getStudentid(){
         return studentid;
     }
     public Course getCoursehead(){
@@ -49,12 +49,20 @@ public class Student extends Person{
             System.out.println("Do you want to continue to enter a score of a course? 1.yes 2. no");
             a = sc.nextInt();
         }
+        System.out.println();
         return;
     }
     public void printScore(){
+        System.out.println("---------------------------------------------------");
         System.out.println("The student name is "+this.getName());
+        System.out.println("Age is: "+this.getAge());
+        System.out.println("E-mail is: "+this.getEmail());
+        System.out.println("ID is: "+this.getStudentid());
+        System.out.println("Score:");
         for(Course i=coursehead;i!=null;i=i.getNext()){
-            System.out.println(i.getCourse()+"    "+i.getScore());
+            System.out.println("     "+i.getCourse()+"    "+i.getScore());
         }
+        System.out.println("---------------------------------------------------");
+        System.out.println();
     }
 }
