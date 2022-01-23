@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Instructor extends Person{
     private String Instructorid;
+    private Instructor next;
     private Course teachinghead;
 
     public Instructor(){
@@ -15,6 +16,8 @@ public class Instructor extends Person{
         this.setEmail(email);
         this.Instructorid=Instructorid;
     }
+    public void setNext(Instructor next){this.next=next;}
+    public Instructor getNext(){return next;}
     public void setInstructorid(String Instructorid){
         this.Instructorid=Instructorid;
     }

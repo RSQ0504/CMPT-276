@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Student extends Person{
     private String studentid;
+    private Student next=null;
     private Course coursehead=null;
 
     public Student(){
@@ -14,6 +15,8 @@ public class Student extends Person{
         this.setEmail(email);
         this.studentid=studentid;
     }
+    public void setNext(Student next){this.next=next;}
+    public Student getNext(){return next;}
     public void setStudentid(String studentid){
         this.studentid=studentid;
     }

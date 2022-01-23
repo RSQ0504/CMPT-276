@@ -1,4 +1,5 @@
 package com.itheima;
+import java.io.File;
 
 public class Course {
     private String course;
