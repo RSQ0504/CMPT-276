@@ -106,7 +106,7 @@ public class Main {
             student_head.setScore();
             p1=student_head;
         }else{
-            while(p1!=null)
+            while(p1.getNext()!=null)
                 p1=p1.getNext();
             p2=new Student(name,age,email,id);
             p2.setScore();
@@ -151,7 +151,7 @@ public class Main {
             instructor_head.setTeaching();
             p1=instructor_head;
         }else{
-            while(p1!=null)
+            while(p1.getNext()!=null)
                 p1=p1.getNext();
             p2=new Instructor(name,age,email,id);
             p2.setTeaching();
@@ -180,12 +180,41 @@ public class Main {
         return instructor_head;
     }
     public static  void main(String[] arge) throws IOException {
+        int check,choose;
         Student student_head=null;
-        student_head=AddStudent(student_head);
-        Output_Student(student_head);
-
         Instructor instructor_head=null;
-        instructor_head=AddInstructor(instructor_head);
+        System.out.println("Do you want to add a person? 1.Yes   2.No");
+        Scanner sc = new Scanner(System.in);
+        check = sc.nextInt();
+        while(check==1){
+            System.out.println("Student or Instructor?");
+            System.out.println("1. Student   2.Instructor");
+            choose=sc.nextInt();
+            switch (choose){
+                case 1 : if(student_head==null) {student_head=AddStudent(student_head);
+                } else {AddStudent(student_head);}
+                            break;
+                case 2 : if(instructor_head==null){instructor_head=AddInstructor(instructor_head);
+                }else{AddInstructor(instructor_head);}
+                    break;
+                default: System.out.println("Wrong input");break;
+            }
+            System.out.println("Do you want to continue to add a person? 1.Yes   2.No");
+            check = sc.nextInt();
+        }
+        Output_Student(student_head);
         Output_Instructor(instructor_head);
+        System.out.println("Student Information");
+        Student p1=student_head;
+        Instructor p2=instructor_head;
+        while(p1!=null){
+            p1.printScore();
+            p1=p1.getNext();
+        }
+        System.out.println("Instructor Information");
+        while(p2!=null){
+            p2.printTeaching();
+            p2=p2.getNext();
+        }
     }
 }
