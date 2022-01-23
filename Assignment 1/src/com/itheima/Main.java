@@ -18,6 +18,7 @@ public class Main {
         byte[] email;
         byte[] ID;
         byte[] score;
+        byte[] title;
         String Age;
         String Score;
         String newline = "\n";
@@ -28,15 +29,25 @@ public class Main {
             age=Age.getBytes();
             email=p1.getEmail().getBytes();
             ID=p1.getStudentid().getBytes();
+            title="Name: ".getBytes();
+            out.write(title);
             out.write(name);
             out.write(Newline);
+            title="Age: ".getBytes();
+            out.write(title);
             out.write(age);
             out.write(Newline);
+            title="Email: ".getBytes();
+            out.write(title);
             out.write(email);
             out.write(Newline);
+            title="ID: ".getBytes();
+            out.write(title);
             out.write(ID);
             out.write(Newline);
             c1=p1.getCoursehead();
+            title="Score: ".getBytes();
+            out.write(title);
             while(c1!=null){
                 Score = c1.getCourse()+"   "+c1.getScore();
                 score=Score.getBytes();
@@ -59,6 +70,7 @@ public class Main {
         byte[] email;
         byte[] ID;
         byte[] course;
+        byte[] title;
         String Age;
         String Course;
         String newline = "\n";
@@ -69,15 +81,25 @@ public class Main {
             age=Age.getBytes();
             email=p1.getEmail().getBytes();
             ID=p1.getInstructorid().getBytes();
+            title="Name: ".getBytes();
+            out.write(title);
             out.write(name);
             out.write(Newline);
+            title="Age: ".getBytes();
+            out.write(title);
             out.write(age);
             out.write(Newline);
+            title="Email: ".getBytes();
+            out.write(title);
             out.write(email);
             out.write(Newline);
+            title="ID: ".getBytes();
+            out.write(title);
             out.write(ID);
             out.write(Newline);
             c1=p1.getCoursehead();
+            title="Course: ".getBytes();
+            out.write(title);
             while(c1!=null){
                 Course = c1.getCourse();
                 course=Course.getBytes();
