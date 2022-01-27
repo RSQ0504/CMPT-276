@@ -3,8 +3,8 @@ import java.io.File;
 
 public class Course {
     private String course;
-    private char score=' ';
-    private Course next=null;
+    private char score=' ';//only for student;
+    private Course next=null;//point to the next course;
 
     public Course(){
         course=new String();

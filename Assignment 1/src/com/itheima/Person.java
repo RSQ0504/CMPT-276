@@ -6,9 +6,10 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
 public abstract class Person {
+    //the method of all functions in this class is similar with Instructor class.
     private String name;
     private String email;
-    private Person nextPerson;
+    private Person nextPerson;//point to the next person;
 
     public Person(){
         name=new String();
@@ -34,6 +35,7 @@ public abstract class Person {
         this.nextPerson=nextPerson;
     }
     public Person getNextPerson(){return nextPerson;}
+    //virtual function;
     public void printinformation(){
         System.out.println("---------------------------------------------------");
         System.out.println("The Person name is "+this.getName());

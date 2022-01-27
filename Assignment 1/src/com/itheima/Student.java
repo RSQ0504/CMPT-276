@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
 public class Student extends Person{
+    //the method used in all functions in this class is similar with the method in Instructor class;
     private String studentid;
     private Course coursehead=null;
 

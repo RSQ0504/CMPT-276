@@ -8,7 +8,7 @@ import java.io.FileOutputStream;
 
 public class Instructor extends Person{
     private String Instructorid;
-    private Course teachinghead;
+    private Course teachinghead;//a pointer of a course this teacher is teaching;
 
     public Instructor(){
         return;
@@ -32,8 +32,8 @@ public class Instructor extends Person{
         System.out.println("Do you want to enter a course? Enter the int: 1.yes 2. no");
         int a;
         String course;
-        Course p1=null;
-        Course p2=null;
+        Course p1=null;//store last address
+        Course p2=null;//new a new memory;
         Scanner sc = new Scanner(System.in);
         a = sc.nextInt();
         while(a==1){
@@ -107,6 +107,7 @@ public class Instructor extends Person{
         out.write(Word);
 
         Course p=teachinghead;
+        //out the information of the Course this teacher is teaching;
         while(p!=null){
             score = "     "+p.getCourse()+"     "+p.getScore();
             Score=score.getBytes();
