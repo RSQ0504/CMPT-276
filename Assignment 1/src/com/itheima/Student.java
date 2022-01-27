@@ -1,32 +1,32 @@
 package com.itheima;
 import java.util.Scanner;
+import java.io.File;
+import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 
 public class Student extends Person{
     private String studentid;
-    private Student next=null;
     private Course coursehead=null;
 
     public Student(){
-        new Person();
+        return;
     }
-    public Student(String name,int age,String email,String studentid){
-        this.setAge(age);
+    public Student(String name,String email,String studentid){
         this.setName(name);
         this.setEmail(email);
         this.studentid=studentid;
     }
-    public void setNext(Student next){this.next=next;}
-    public Student getNext(){return next;}
-    public void setStudentid(String studentid){
+    public void set_id(String studentid){
         this.studentid=studentid;
     }
-    public String getStudentid(){
+    public String get_id(){
         return studentid;
     }
     public Course getCoursehead(){
         return coursehead;
     }
-    public void setScore(){
+    public void setinformation(){
         System.out.println("The student name is "+this.getName());
         System.out.println("Do you want to enter a score of a course? Enter the int: 1.yes 2. no");
         int a;
@@ -52,20 +52,74 @@ public class Student extends Person{
             System.out.println("Do you want to continue to enter a score of a course? 1.yes 2. no");
             a = sc.nextInt();
         }
-        System.out.println();
         return;
     }
-    public void printScore(){
+    public void printinformation(){
         System.out.println("---------------------------------------------------");
         System.out.println("The student name is "+this.getName());
-        System.out.println("Age is: "+this.getAge());
         System.out.println("E-mail is: "+this.getEmail());
-        System.out.println("ID is: "+this.getStudentid());
+        System.out.println("ID is: "+this.get_id());
         System.out.println("Score:");
         for(Course i=coursehead;i!=null;i=i.getNext()){
             System.out.println("     "+i.getCourse()+"    "+i.getScore());
         }
         System.out.println("---------------------------------------------------");
-        System.out.println();
+    }
+    public void File_Out(FileOutputStream out) throws IOException {
+        byte[] Name;
+        byte[] Email;
+        byte[] Word;
+        byte[] ID;
+        String score;
+        byte[] Score;
+        Name = getName().getBytes();
+        Email = getEmail().getBytes();
+        ID = get_id().getBytes();
+        Word="----------------------------------------".getBytes();
+        out.write(Word);
+        Word="\n".getBytes();
+        out.write(Word);
+
+        Word="This is a Student:".getBytes();
+        out.write(Word);
+        Word="\n".getBytes();
+        out.write(Word);
+
+        Word="Name: ".getBytes();
+        out.write(Word);
+        out.write(Name);
+        Word="\n".getBytes();
+        out.write(Word);
+
+        Word="email: ".getBytes();
+        out.write(Word);
+        out.write(Email);
+        Word="\n".getBytes();
+        out.write(Word);
+
+        Word="ID: ".getBytes();
+        out.write(Word);
+        out.write(ID);
+        Word="\n".getBytes();
+        out.write(Word);
+
+        Word="Score is:".getBytes();
+        out.write(Word);
+        Word="\n".getBytes();
+        out.write(Word);
+
+        Course p=coursehead;
+        while(p!=null){
+            score = "     "+p.getCourse()+"     "+p.getScore();
+            Score=score.getBytes();
+            out.write(Score);
+            out.write(Word);
+            p=p.getNext();
+        }
+
+        Word="----------------------------------------".getBytes();
+        out.write(Word);
+        Word="\n".getBytes();
+        out.write(Word);
     }
 }

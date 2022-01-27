@@ -1,0 +1,36 @@
+----------------------------------------
+This is a Student:
+Name: David
+email: rqa4@sfu.ca
+ID: 001
+Score is:
+     CMPT276     A
+     MACM201     A
+----------------------------------------
+----------------------------------------
+This is a Student:
+Name: Isaac
+email: isac@sfu.ca
+ID: 002
+Score is:
+     CMPT276     A
+     MACM201     A
+----------------------------------------
+----------------------------------------
+This is an Instructor:
+Name: David
+email: rqa4@sfu.ca
+ID: 001
+Course which is teaching is:
+     CMPT      
+     MACM      
+----------------------------------------
+----------------------------------------
+This is an Instructor:
+Name: Isaac
+email: isac@sfu.ca
+ID: 002
+Course which is teaching is:
+     CMPT      
+     MACM      
+----------------------------------------
