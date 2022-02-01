@@ -1,63 +1,63 @@
 {"Information": [
-{
-"Person": "This is a Student",
-"Name": "David",
-"email": "rqa4@sfu.ca",
-"ID": "001",
-"Score is": [
-{
-"Couse": "CMPT276",
-"Score": "A",
-},
-{
-"Couse": "MACM201",
-"Score": "A",
-},
-],
-},
-{
-"Person": "This is an Instructor",
-"Name": "David",
-"email": "rqa4@sfu.ca",
-"ID": "001",
-"Course which is teaching is": [
-{
-"Couse": "CMPT",
-},
-{
-"Couse": "MACM",
-},
-],
-},
-{
-"Person": "This is a Student",
-"Name": "Isaac",
-"email": "isac@sfu.ca",
-"ID": "002",
-"Score is": [
-{
-"Couse": "CMPT",
-"Score": "A",
-},
-{
-"Couse": "MATH232",
-"Score": "A",
-},
-],
-},
-{
-"Person": "This is an Instructor",
-"Name": "Isaac",
-"email": "isac@sfu.ca",
-"ID": "002",
-"Course which is teaching is": [
-{
-"Couse": "CMPT",
-},
-{
-"Couse": "MATh",
-},
-],
-},
+ {
+  "Person": "This is a Student",
+  "Name": "David",
+  "email": "rqa4@sfu.ca",
+  "ID": "001",
+  "Score is": [
+   {
+    "Couse": "CMPT276",
+    "Score": "A",
+   },
+   {
+    "Couse": "MACM201",
+    "Score": "A",
+   },
+  ],
+ },
+ {
+  "Person": "This is an Instructor",
+  "Name": "David",
+  "email": "rqa4@sfu.ca",
+  "ID": "001",
+  "Course which is teaching is": [
+   {
+    "Couse": "CMPT",
+   },
+   {
+    "Couse": "MACM",
+   },
+  ],
+ },
+ {
+  "Person": "This is a Student",
+  "Name": "Isaac",
+  "email": "isac@sfu.ca",
+  "ID": "002",
+  "Score is": [
+   {
+    "Couse": "CMPT276",
+    "Score": "A",
+   },
+   {
+    "Couse": "MATH232",
+    "Score": "A",
+   },
+  ],
+ },
+ {
+  "Person": "This is an Instructor",
+  "Name": "Isaac",
+  "email": "isac@sfu.ca",
+  "ID": "002",
+  "Course which is teaching is": [
+   {
+    "Couse": "CMPT",
+   },
+   {
+    "Couse": "MATH",
+   },
+  ],
+ },
 ]
 }

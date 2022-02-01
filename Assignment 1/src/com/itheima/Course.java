@@ -36,20 +36,20 @@ public class Course {
       byte[] Course_name=course.getBytes();
       int Score=score;
       byte[] Word;
-      Word="{\n".getBytes();
+      Word="   {\n".getBytes();
       out.write(Word);
 
-      Word="\"Couse\": \"".getBytes();
+      Word="    \"Couse\": \"".getBytes();
       out.write(Word);
       out.write(Course_name);
 
       if(score!=' ') {
-        Word = "\",\n\"Score\": \"".getBytes();
+        Word = "\",\n    \"Score\": \"".getBytes();
         out.write(Word);
         out.write(Score);
       }
 
-      Word="\",\n},\n".getBytes();
+      Word="\",\n   },\n".getBytes();
       out.write(Word);
     }
 }

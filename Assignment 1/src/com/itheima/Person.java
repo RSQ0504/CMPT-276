@@ -60,22 +60,22 @@ public abstract class Person {
       byte[] Name = getName().getBytes();
       byte[] Email = getEmail().getBytes();
       byte[] Word;
-      Word="{\n\"Person\": \"This is a Person\",\n".getBytes();
+      Word=" {\n  \"Person\": \"This is a Person\",\n".getBytes();
       out.write(Word);
 
-      Word="\"Name\": \"".getBytes();
+      Word="  \"Name\": \"".getBytes();
       out.write(Word);
       out.write(Name);
       Word="\",\n".getBytes();
       out.write(Word);
 
-      Word="\"email\": \"".getBytes();
+      Word="  \"email\": \"".getBytes();
       out.write(Word);
       out.write(Email);
       Word="\",\n".getBytes();
       out.write(Word);
 
-      Word="},\n".getBytes();
+      Word=" },\n".getBytes();
       out.write(Word);
     }
 }

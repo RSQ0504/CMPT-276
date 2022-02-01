@@ -71,28 +71,28 @@ public class Student extends Person{
         byte[] Email = getEmail().getBytes();
         byte[] Word;
         byte[] ID = get_id().getBytes();
-        Word="{\n\"Person\": \"This is a Student\",\n".getBytes();
+        Word=" {\n  \"Person\": \"This is a Student\",\n".getBytes();
         out.write(Word);
 
-        Word="\"Name\": \"".getBytes();
+        Word="  \"Name\": \"".getBytes();
         out.write(Word);
         out.write(Name);
         Word="\",\n".getBytes();
         out.write(Word);
 
-        Word="\"email\": \"".getBytes();
+        Word="  \"email\": \"".getBytes();
         out.write(Word);
         out.write(Email);
         Word="\",\n".getBytes();
         out.write(Word);
 
-        Word="\"ID\": \"".getBytes();
+        Word="  \"ID\": \"".getBytes();
         out.write(Word);
         out.write(ID);
         Word="\",\n".getBytes();
         out.write(Word);
 
-      Word="\"Score is\": [\n".getBytes();
+      Word="  \"Score is\": [\n".getBytes();
       out.write(Word);
 
         Course p=coursehead;
@@ -101,7 +101,7 @@ public class Student extends Person{
             p=p.getNext();
         }
 
-        Word="],\n},\n".getBytes();
+        Word="  ],\n },\n".getBytes();
         out.write(Word);
     }
 }

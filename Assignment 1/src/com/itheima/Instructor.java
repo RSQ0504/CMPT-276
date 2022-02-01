@@ -68,28 +68,28 @@ public class Instructor extends Person{
         byte[] Email= getEmail().getBytes();
         byte[] Word;
         byte[] ID= get_id().getBytes();
-        Word="{\n\"Person\": \"This is an Instructor\",\n".getBytes();
+        Word=" {\n  \"Person\": \"This is an Instructor\",\n".getBytes();
         out.write(Word);
 
-        Word="\"Name\": \"".getBytes();
+        Word="  \"Name\": \"".getBytes();
         out.write(Word);
         out.write(Name);
         Word="\",\n".getBytes();
         out.write(Word);
 
-        Word="\"email\": \"".getBytes();
+        Word="  \"email\": \"".getBytes();
         out.write(Word);
         out.write(Email);
         Word="\",\n".getBytes();
         out.write(Word);
 
-        Word="\"ID\": \"".getBytes();
+        Word="  \"ID\": \"".getBytes();
         out.write(Word);
         out.write(ID);
         Word="\",\n".getBytes();
         out.write(Word);
 
-        Word="\"Course which is teaching is\": [\n".getBytes();
+        Word="  \"Course which is teaching is\": [\n".getBytes();
         out.write(Word);
 
         Course p=teachinghead;
@@ -99,7 +99,7 @@ public class Instructor extends Person{
             p=p.getNext();
         }
 
-        Word="],\n},\n".getBytes();
+        Word="  ],\n },\n".getBytes();
         out.write(Word);
     }
 }
