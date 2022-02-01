@@ -31,8 +31,8 @@
  },
  {
   "Person": "This is a Student",
-  "Name": "Isaac",
-  "email": "isac@sfu.ca",
+  "Name": "Chao",
+  "email": "chao@sfu.ca",
   "ID": "002",
   "Score is": [
    {
@@ -47,8 +47,8 @@
  },
  {
   "Person": "This is an Instructor",
-  "Name": "Isaac",
-  "email": "isac@sfu.ca",
+  "Name": "Chao",
+  "email": "chao@sfu.ca",
   "ID": "002",
   "Course which is teaching is": [
    {
