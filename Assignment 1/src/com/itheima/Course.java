@@ -1,5 +1,6 @@
 package com.itheima;
-import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class Course {
     private String course;
@@ -30,5 +31,25 @@ public class Course {
     }
     public void setScore(char score) {
         this.score = score;
+    }
+    public void File_Out(FileOutputStream out) throws IOException {
+      byte[] Course_name=course.getBytes();
+      int Score=score;
+      byte[] Word;
+      Word="{\n".getBytes();
+      out.write(Word);
+
+      Word="\"Couse\": \"".getBytes();
+      out.write(Word);
+      out.write(Course_name);
+
+      if(score!=' ') {
+        Word = "\",\n\"Score\": \"".getBytes();
+        out.write(Word);
+        out.write(Score);
+      }
+
+      Word="\",\n},\n".getBytes();
+      out.write(Word);
     }
 }

@@ -57,36 +57,25 @@ public abstract class Person {
         return null;
     }
     public void File_Out(FileOutputStream out) throws IOException {
-        byte[] Name;
-        byte[] Email;
-        byte[] Word;
-        Name = name.getBytes();
-        Email = email.getBytes();
-        Word="----------------------------------------".getBytes();
-        out.write(Word);
-        Word="\n".getBytes();
-        out.write(Word);
+      byte[] Name = getName().getBytes();
+      byte[] Email = getEmail().getBytes();
+      byte[] Word;
+      Word="{\n\"Person\": \"This is a Person\",\n".getBytes();
+      out.write(Word);
 
-        Word="This is a person:".getBytes();
-        out.write(Word);
-        Word="\n".getBytes();
-        out.write(Word);
+      Word="\"Name\": \"".getBytes();
+      out.write(Word);
+      out.write(Name);
+      Word="\",\n".getBytes();
+      out.write(Word);
 
-        Word="Name: ".getBytes();
-        out.write(Word);
-        out.write(Name);
-        Word="\n".getBytes();
-        out.write(Word);
+      Word="\"email\": \"".getBytes();
+      out.write(Word);
+      out.write(Email);
+      Word="\",\n".getBytes();
+      out.write(Word);
 
-        Word="email: ".getBytes();
-        out.write(Word);
-        out.write(Email);
-        Word="\n".getBytes();
-        out.write(Word);
-
-        Word="----------------------------------------".getBytes();
-        out.write(Word);
-        Word="\n".getBytes();
-        out.write(Word);
+      Word="},\n".getBytes();
+      out.write(Word);
     }
 }

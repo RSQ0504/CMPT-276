@@ -12,6 +12,9 @@ public class Main {
         File information = new File("Assignment 1/Information.json");
         information.createNewFile();
         FileOutputStream out = new FileOutputStream(information);
+
+        byte[] word = "{\"Information\": [\n".getBytes();
+        out.write(word);
         //head of the linked list and 2 points for pointing out the point "Next"
         Person head = null,p1=null,p2=null;
         int check;//check is a "Yes or No" "Student or instructor" object. it helps me to control loop;
@@ -66,6 +69,8 @@ public class Main {
             System.out.println("Do you want to enter a person.         1. Yes    2.NO");
             check = sc.nextInt();
         }
+        word ="]\n}".getBytes();
+        out.write(word);
         out.close();
 
         //repoint to the head;

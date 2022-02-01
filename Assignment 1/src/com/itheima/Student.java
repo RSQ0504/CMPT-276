@@ -67,60 +67,41 @@ public class Student extends Person{
         System.out.println("---------------------------------------------------");
     }
     public void File_Out(FileOutputStream out) throws IOException {
-        byte[] Name;
-        byte[] Email;
+        byte[] Name = getName().getBytes();
+        byte[] Email = getEmail().getBytes();
         byte[] Word;
-        byte[] ID;
-        String score;
-        byte[] Score;
-        Name = getName().getBytes();
-        Email = getEmail().getBytes();
-        ID = get_id().getBytes();
-        Word="----------------------------------------".getBytes();
-        out.write(Word);
-        Word="\n".getBytes();
+        byte[] ID = get_id().getBytes();
+        Word="{\n\"Person\": \"This is a Student\",\n".getBytes();
         out.write(Word);
 
-        Word="This is a Student:".getBytes();
-        out.write(Word);
-        Word="\n".getBytes();
-        out.write(Word);
-
-        Word="Name: ".getBytes();
+        Word="\"Name\": \"".getBytes();
         out.write(Word);
         out.write(Name);
-        Word="\n".getBytes();
+        Word="\",\n".getBytes();
         out.write(Word);
 
-        Word="email: ".getBytes();
+        Word="\"email\": \"".getBytes();
         out.write(Word);
         out.write(Email);
-        Word="\n".getBytes();
+        Word="\",\n".getBytes();
         out.write(Word);
 
-        Word="ID: ".getBytes();
+        Word="\"ID\": \"".getBytes();
         out.write(Word);
         out.write(ID);
-        Word="\n".getBytes();
+        Word="\",\n".getBytes();
         out.write(Word);
 
-        Word="Score is:".getBytes();
-        out.write(Word);
-        Word="\n".getBytes();
-        out.write(Word);
+      Word="\"Score is\": [\n".getBytes();
+      out.write(Word);
 
         Course p=coursehead;
         while(p!=null){
-            score = "     "+p.getCourse()+"     "+p.getScore();
-            Score=score.getBytes();
-            out.write(Score);
-            out.write(Word);
+            p.File_Out(out);
             p=p.getNext();
         }
 
-        Word="----------------------------------------".getBytes();
-        out.write(Word);
-        Word="\n".getBytes();
+        Word="],\n},\n".getBytes();
         out.write(Word);
     }
 }
