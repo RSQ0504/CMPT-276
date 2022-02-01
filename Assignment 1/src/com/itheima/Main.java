@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Main {
     public static  void main(String[] arge) throws IOException {
         //open a file;
-        File information = new File("/Users/qianrongsheng/Desktop/CMPT 276-D100/276assignments/Assignment 1/Information.json");
+        File information = new File("Assignment 1/Information.json");
         information.createNewFile();
         FileOutputStream out = new FileOutputStream(information);
         //head of the linked list and 2 points for pointing out the point "Next"
