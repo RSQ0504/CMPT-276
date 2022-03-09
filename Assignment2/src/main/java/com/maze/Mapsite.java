@@ -1,7 +1,10 @@
 package com.maze;
 
 public abstract class Mapsite {
-  boolean enter(){
+  public boolean enter(){
     return Boolean.parseBoolean(null);
+  }
+  public Room otherSideFrom(Room r){
+    return null;
   }
 }

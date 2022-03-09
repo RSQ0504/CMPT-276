@@ -8,8 +8,9 @@ public class Doors extends Mapsite{
     room2 = r2;
   }
   public String toString() {
-  return "Door #" + new Integer(doorNr).toString();
+  return "Door #" + doorNr;
   }
+
   public Room otherSideFrom(Room r){
     if(r==room1)
       return room2;
@@ -20,6 +21,12 @@ public class Doors extends Mapsite{
       return null;
     }
   }
+
+  public boolean enter(){
+    System.out.println("Can enter "+ room1.toString()+" "+room2.toString());
+    return true;
+  }
+
   private static int doorCnt = 1;
   private int doorNr;
   private Room room1;

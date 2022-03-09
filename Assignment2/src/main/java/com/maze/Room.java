@@ -15,8 +15,20 @@ public class Room extends Mapsite{
   }
 
   @Override
-  boolean enter() {
-    return super.enter();
+  public boolean enter() {
+    if(northSide.enter()|| southSide.enter() || eastSide.enter() || westSide.enter()){
+      if(northSide.enter())
+        System.out.println("Enter "+northSide.otherSideFrom(this).toString());
+      if(southSide.enter())
+        System.out.println("Enter "+southSide.otherSideFrom(this).toString());
+      if(westSide.enter())
+        System.out.println("Enter "+westSide.otherSideFrom(this).toString());
+      if(eastSide.enter())
+        System.out.println("Enter "+eastSide.otherSideFrom(this).toString());
+      return true;
+    }
+    System.out.println("this room has no door :)");
+    return false;
   }
 
   public void setside(Direction direction, Mapsite site){
@@ -55,6 +67,6 @@ public class Room extends Mapsite{
     return result;
   }
   public String toString() {
-    return "Room #" + new Integer(roomNr).toString();
+    return "Room #" + roomNr;
   }
   }
