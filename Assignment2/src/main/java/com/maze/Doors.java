@@ -3,7 +3,7 @@ package com.maze;
 public class Doors extends Mapsite{
   Doors(Room r1, Room r2) {
     doorNr = doorCnt++;
-    System.out.println("creating a Door #" + doorNr + " between " + r1 + " and " + r2);
+    System.out.println("creating a " + toString() + " between " + r1 + " and " + r2);
     room1 = r1;
     room2 = r2;
   }
@@ -23,7 +23,7 @@ public class Doors extends Mapsite{
   }
 
   public boolean enter(){
-    System.out.println("Can enter "+ room1.toString()+" "+room2.toString());
+    //System.out.println(this.toString() +" can enter "+ room1.toString()+" "+room2.toString());
     return true;
   }
 

@@ -18,13 +18,13 @@ public class Room extends Mapsite{
   public boolean enter() {
     if(northSide.enter()|| southSide.enter() || eastSide.enter() || westSide.enter()){
       if(northSide.enter())
-        System.out.println("Enter "+northSide.otherSideFrom(this).toString());
+        System.out.println(this.toString()+" can enter "+northSide.otherSideFrom(this).toString()+" with "+eastSide.toString());
       if(southSide.enter())
-        System.out.println("Enter "+southSide.otherSideFrom(this).toString());
+        System.out.println(this.toString()+" can enter "+southSide.otherSideFrom(this).toString()+" with "+eastSide.toString());
       if(westSide.enter())
-        System.out.println("Enter "+westSide.otherSideFrom(this).toString());
+        System.out.println(this.toString()+" can enter "+westSide.otherSideFrom(this).toString()+" with "+eastSide.toString());
       if(eastSide.enter())
-        System.out.println("Enter "+eastSide.otherSideFrom(this).toString());
+        System.out.println(this.toString()+" can enter "+eastSide.otherSideFrom(this).toString()+" with "+eastSide.toString());
       return true;
     }
     System.out.println("this room has no door :)");
@@ -69,4 +69,8 @@ public class Room extends Mapsite{
   public String toString() {
     return "Room #" + roomNr;
   }
+
+  public int getRoomNr() {
+    return roomNr;
   }
+}

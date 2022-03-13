@@ -12,7 +12,7 @@ public class Wall extends Mapsite{
   private static int wallCnt = 1;
 
   public boolean enter(){
-    System.out.println("This is a Wall. Cannot be entered!");
+    //System.out.println(this.toString() +" Cannot be entered!");
     return false;
   }
 }
