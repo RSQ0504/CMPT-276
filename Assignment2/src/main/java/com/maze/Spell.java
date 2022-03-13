@@ -9,13 +9,12 @@ public class Spell {
   }
 
   Spell(){
-    System.out.println("set up a Spelling");
-    Scanner input=new Scanner(System.in);
-    setSpell(input.next());
   }
 
-  public void setSpell(String p) {
-    this.p = p;
+  public void setSpell() {
+    System.out.println("set up a Spelling");
+    Scanner input=new Scanner(System.in);
+    p = input.next();
   }
 
 }

@@ -12,6 +12,7 @@ public class Room extends Mapsite{
   Room() {
     Mapsite result = null;
     roomNr = roomCnt++;
+    System.out.println("creating Room #" + roomNr);
   }
 
   @Override
