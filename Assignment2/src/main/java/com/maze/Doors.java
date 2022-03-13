@@ -23,7 +23,7 @@ public class Doors extends Mapsite{
   }
 
   public boolean enter(){
-    //System.out.println(this.toString() +" can enter "+ room1.toString()+" "+room2.toString());
+    System.out.println(this.toString() +" can enter "+ room1.toString()+" "+room2.toString());
     return true;
   }
 

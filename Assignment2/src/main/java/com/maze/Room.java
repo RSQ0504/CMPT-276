@@ -16,15 +16,20 @@ public class Room extends Mapsite{
 
   @Override
   public boolean enter() {
-    if(northSide.enter()|| southSide.enter() || eastSide.enter() || westSide.enter()){
-      if(northSide.enter())
-        System.out.println(this.toString()+" can enter "+northSide.otherSideFrom(this).toString()+" with "+eastSide.toString());
-      if(southSide.enter())
-        System.out.println(this.toString()+" can enter "+southSide.otherSideFrom(this).toString()+" with "+eastSide.toString());
-      if(westSide.enter())
-        System.out.println(this.toString()+" can enter "+westSide.otherSideFrom(this).toString()+" with "+eastSide.toString());
-      if(eastSide.enter())
-        System.out.println(this.toString()+" can enter "+eastSide.otherSideFrom(this).toString()+" with "+eastSide.toString());
+    if(northSide.enter()) {
+      System.out.println(this.toString() + " can enter " + northSide.otherSideFrom(this).toString() + " with " + northSide.toString());
+      return true;
+    }
+    if(southSide.enter()) {
+      System.out.println(this.toString() + " can enter " + southSide.otherSideFrom(this).toString() + " with " + southSide.toString());
+      return true;
+    }
+    if(westSide.enter()) {
+      System.out.println(this.toString() + " can enter " + westSide.otherSideFrom(this).toString() + " with " + westSide.toString());
+      return true;
+    }
+    if(eastSide.enter()) {
+      System.out.println(this.toString() + " can enter " + eastSide.otherSideFrom(this).toString() + " with " + eastSide.toString());
       return true;
     }
     System.out.println("this room has no door :)");
