@@ -12,7 +12,7 @@ public class Spell {
   }
 
   public void setSpell() {
-    System.out.println("set up a Spelling");
+    System.out.println("set up a Spell");
     Scanner input=new Scanner(System.in);
     p = input.next();
   }
