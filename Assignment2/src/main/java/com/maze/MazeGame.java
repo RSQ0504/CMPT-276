@@ -3,6 +3,7 @@ package com.maze;
 public class MazeGame {
   public Maze createMaze(MazeFactory factory) {
     Maze template_Maze = factory.makeMaze();
+
     Room r1 = factory.createRoom();
     Room r2 = factory.createRoom();
     Doors theDoor = factory.makeDoors(r1,r2);
@@ -16,8 +17,7 @@ public class MazeGame {
     r2.setside(Direction.East, factory.makeWall());
     r2.setside(Direction.South, factory.makeWall());
     r2.setside(Direction.West, theDoor);
-    r1.enter();
-    r2.enter();
+
     return template_Maze;
   }
 }

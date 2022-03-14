@@ -37,6 +37,22 @@ public class Room extends Mapsite{
     return false;
   }
 
+  public Room otherSideFrom(Room r){
+    if(northSide.enter()) {
+      return northSide.otherSideFrom(this);
+    }
+    if(southSide.enter()) {
+      return southSide.otherSideFrom(this);
+    }
+    if(westSide.enter()) {
+      return westSide.otherSideFrom(this);
+    }
+    if(eastSide.enter()) {
+      return eastSide.otherSideFrom(this);
+    }
+    return null;
+  }
+
   public void setside(Direction direction, Mapsite site){
     switch(direction){
       case North:
